@@ -1,48 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
-  <!--========= HEAD =========-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mes projets de développement — portfolio d'un étudiant BUT Informatique à Grenoble." />
+  <title>Projets — Portfolio BUT Info</title>
 
-    <!-- Police JetBrain -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
 
-    <!-- Police Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <!--========= HEADER =========-->
-  <header>
-    <a href="index.html"> <h1>Mon portfolio</h1></a>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="aPropos.html">A propos</a>
-      <a href="./" class="pageActuel">Mes projets</a>
-      <button onclick="goContact()">Me contacter</button>
-    </nav>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">dev.portfolio</a>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="projets.html" class="active" aria-current="page">Projets</a>
+        <a href="aPropos.html">À propos</a>
+        <a href="contact.html" class="header__cta">Contact</a>
+      </nav>
+    </div>
   </header>
-  <script>
-    function goContact() {
-      window.location.href = "contact.html";
-    }
-  </script>
 
-  <!--========= BODY =========-->
-  <body></body>
-  <!--========= FOOTER=========-->
-  <footer></footer>
+  <main>
+    <section class="projets-page">
+      <div class="container--wide">
+        <div class="section-header" style="text-align:left; max-width: 760px;">
+          <h1>Mes projets</h1>
+          <p>
+            J'ai restructuré cette page pour te laisser plus de place par projet sans multiplier les pages.
+            Chaque carte donne un aperçu clair, puis ouvre une fenêtre détaillée avec galerie, contexte, objectifs,
+            stack technique, défis rencontrés et liens externes.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-card__media">
+              <img class="project-card__img" src="https://picsum.photos/seed/weather-detail/900/600" alt="Aperçu du projet météo" width="900" height="600" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">Projet web</span>
+                <span class="tag">API REST</span>
+              </div>
+              <h2 class="project-card__title">Application météo interactive</h2>
+              <p class="project-card__desc">
+                Projet front-end orienté données, avec récupération météo en temps réel, affichage clair, et travail soigné sur la hiérarchie visuelle.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Appel API, traitement des réponses JSON</li>
+                <li>UI responsive pensée mobile-first</li>
+                <li>Bonne base pour ajouter historique ou favoris</li>
+              </ul>
+              <div class="project-card__tags card-tags">
+                <span class="tag">
+                  <img src="https://cdn.simpleicons.org/html5/7a1cac" alt="" class="tag__logo" aria-hidden="true"/>
+                  HTML
+                </span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Fetch API</span>
+              </div>
+              <div class="project-card__actions">
+                <button
+                  class="btn btn--primary project-card__button"
+                  type="button"
+                  data-project-opens
+                  data-project-title="Application météo interactive"
+                  data-project-kicker="Projet web / API"
+                  data-project-description="Ici, tu pourras écrire une présentation plus longue du projet : son contexte, son but, les fonctionnalités principales, les choix techniques et les résultats obtenus."
+                  data-project-role="Travail individuel ou en binôme — à compléter"
+                  data-project-stack="HTML, CSS, JavaScript, API REST"
+                  data-project-goals="Afficher les données météo clairement ; apprendre à consommer une API ; travailler la mise en page responsive"
+                  data-project-challenges="Gestion des erreurs API ; formatage des données ; optimisation de l'interface"
+                  data-project-results="Prototype fonctionnel ; meilleure maîtrise du JavaScript asynchrone"
+                  data-project-github="https://github.com/"
+                  data-project-demo="https://example.com"
+                  data-project-image-main="https://picsum.photos/seed/weather-main/1000/700"
+                  data-project-image-2="https://picsum.photos/seed/weather-screen-2/700/500"
+                  data-project-image-3="https://picsum.photos/seed/weather-screen-3/700/500"
+                >Voir le projet en détail</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media">
+              <img class="project-card__img" src="https://picsum.photos/seed/library-detail/900/600" alt="Aperçu du projet de bibliothèque" width="900" height="600" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">SAÉ</span>
+                <span class="tag">Base de données</span>
+              </div>
+              <h2 class="project-card__title">Gestion de bibliothèque</h2>
+              <p class="project-card__desc">
+                Projet orienté gestion avec interface d'administration, modélisation des données et logique CRUD autour des emprunts, ouvrages et utilisateurs.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Travail sur la structure des données</li>
+                <li>Organisation des rôles utilisateur</li>
+                <li>Bonne base pour une fiche projet détaillée</li>
+              </ul>
+              <div class="project-card__tags card-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">CRUD</span>
+                <span class="tag">Modélisation</span>
+              </div>
+              <div class="project-card__actions">
+                <button
+                  class="btn btn--primary project-card__button"
+                  type="button"
+                  data-project-open
+                  data-project-title="Gestion de bibliothèque"
+                  data-project-kicker="SAÉ / Application de gestion"
+                  data-project-description="Tu peux détailler ici le contexte universitaire, les fonctionnalités développées, la répartition du travail, la base de données, l'interface d'administration et les améliorations possibles."
+                  data-project-role="Projet de groupe — à compléter"
+                  data-project-stack="PHP, MySQL, HTML, CSS"
+                  data-project-goals="Concevoir une application de gestion complète ; structurer une base de données ; produire une interface simple et efficace"
+                  data-project-challenges="Relations entre entités ; sécurité des formulaires ; cohérence de l'interface"
+                  data-project-results="Application exploitable ; progression en back-end et en modélisation"
+                  data-project-github="https://github.com/"
+                  data-project-demo="https://example.com"
+                  data-project-image-main="https://picsum.photos/seed/library-main/1000/700"
+                  data-project-image-2="https://picsum.photos/seed/library-screen-2/700/500"
+                  data-project-image-3="https://picsum.photos/seed/library-screen-3/700/500"
+                >Voir le projet en détail</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media">
+              <img class="project-card__img" src="https://picsum.photos/seed/python-detail/900/600" alt="Aperçu d'un script Python" width="900" height="600" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">Python</span>
+                <span class="tag">Automatisation</span>
+              </div>
+              <h2 class="project-card__title">Automatisation de fichiers</h2>
+              <p class="project-card__desc">
+                Un script pensé pour gagner du temps : trier, renommer et organiser des fichiers automatiquement selon des règles définies.
+              </p>
+              <ul class="project-card__highlights">
+                <li>Utilisation de la ligne de commande</li>
+                <li>Règles de tri et renommage</li>
+                <li>Projet simple mais très concret</li>
+              </ul>
+              <div class="project-card__tags card-tags">
+                <span class="tag">Python</span>
+                <span class="tag">CLI</span>
+                <span class="tag">pathlib</span>
+              </div>
+              <div class="project-card__actions">
+                <button
+                  class="btn btn--primary project-card__button"
+                  type="button"
+                  data-project-open
+                  data-project-title="Automatisation de fichiers"
+                  data-project-kicker="Python / Productivité"
+                  data-project-description="Zone prévue pour ajouter une description complète du besoin, de la logique du script, des règles de tri, du traitement des erreurs et de l'intérêt concret du projet."
+                  data-project-role="Projet personnel"
+                  data-project-stack="Python, pathlib, argparse"
+                  data-project-goals="Automatiser des tâches répétitives ; structurer un petit outil CLI ; manipuler les fichiers proprement"
+                  data-project-challenges="Cas limites sur les noms ; conflits de fichiers ; UX en ligne de commande"
+                  data-project-results="Outil réutilisable et facile à faire évoluer"
+                  data-project-github="https://github.com/"
+                  data-project-demo="https://example.com"
+                  data-project-image-main="https://picsum.photos/seed/python-main/1000/700"
+                  data-project-image-2="https://picsum.photos/seed/python-screen-2/700/500"
+                  data-project-image-3="https://picsum.photos/seed/python-screen-3/700/500"
+                >Voir le projet en détail</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       MODAL PROJET — une seule structure réutilisée
+       Il suffit de modifier les data-* des boutons de chaque carte.
+       ===================================================== -->
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="project-modal__close" id="project-modal-close" type="button" aria-label="Fermer la fenêtre projet">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+
+      <div class="project-modal__content">
+        <div class="project-modal__gallery">
+          <div class="project-modal__gallery-main">
+            <img id="modal-image-main" src="" alt="Aperçu principal du projet" width="1000" height="700" />
+          </div>
+          <div class="project-modal__gallery-grid">
+            <img id="modal-image-2" src="" alt="Capture secondaire du projet" width="700" height="500" />
+            <img id="modal-image-3" src="" alt="Capture complémentaire du projet" width="700" height="500" />
+          </div>
+        </div>
+
+        <div class="project-modal__panel">
+          <p class="project-modal__kicker" id="project-modal-kicker"></p>
+          <h2 class="project-modal__title" id="project-modal-title"></h2>
+          <p class="project-modal__text" id="project-modal-description"></p>
+
+          <div>
+            <h3>Mon rôle</h3>
+            <p class="project-modal__text" id="project-modal-role"></p>
+          </div>
+
+          <div>
+            <h3>Stack technique</h3>
+            <p class="project-modal__text" id="project-modal-stack"></p>
+          </div>
+
+          <div>
+            <h3>Objectifs</h3>
+            <ul class="project-modal__list" id="project-modal-goals"></ul>
+          </div>
+
+          <div>
+            <h3>Défis rencontrés</h3>
+            <ul class="project-modal__list" id="project-modal-challenges"></ul>
+          </div>
+
+          <div>
+            <h3>Résultats</h3>
+            <ul class="project-modal__list" id="project-modal-results"></ul>
+          </div>
+
+          <div class="project-modal__links">
+            <a id="project-modal-github" class="btn btn--outline" href="#" target="_blank" rel="noopener noreferrer">Voir le GitHub</a>
+            <a id="project-modal-demo" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <h2 class="text-gradient">Construisons quelque chose de solide</h2>
+        <p>Je suis disponible pour échanger autour d'un stage, d'une alternance ou d'un projet étudiant.</p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h3>Navigation</h3>
+          <a href="index.html">Accueil</a>
+          <a href="projets.html">Projets</a>
+          <a href="aPropos.html">À propos</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer__col">
+          <h3>Formation</h3>
+          <p>BUT Informatique</p>
+          <p>IUT 2 — Grenoble</p>
+          <p>1ère année — 2024/2025</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Retrouvez-moi</h3>
+          <div class="footer__socials">
+            <a class="footer__social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.426 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.455-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/></svg>
+              </span>
+              <span class="footer__social-label">GitHub</span>
+            </a>
+            <a class="footer__social-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.5H6.26V17H8.34M7.3 9.56A1.2 1.2 0 1 0 7.3 7.16A1.2 1.2 0 0 0 7.3 9.56M17.74 17V13.42C17.74 11.5 16.71 10.3 14.96 10.3C13.55 10.3 12.92 11.08 12.57 11.63V10.5H10.5C10.53 11.25 10.5 17 10.5 17H12.57V13.37C12.57 13.18 12.58 12.99 12.64 12.85C12.79 12.47 13.14 12.07 13.72 12.07C14.48 12.07 14.79 12.64 14.79 13.48V17H17.74Z"/></svg>
+              </span>
+              <span class="footer__social-label">LinkedIn</span>
+            </a>
+            <a class="footer__social-link" href="assets/cv.pdf" download aria-label="Télécharger mon CV">
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              </span>
+              <span class="footer__social-label">Mon CV (PDF)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 [Votre Prénom] — Étudiant BUT Informatique, IUT 2 Grenoble</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const modal = document.getElementById('project-modal');
+    const closeModalButton = document.getElementById('project-modal-close');
+    const openButtons = document.querySelectorAll('[data-project-open]');
+
+    const modalFields = {
+      kicker: document.getElementById('project-modal-kicker'),
+      title: document.getElementById('project-modal-title'),
+      description: document.getElementById('project-modal-description'),
+      role: document.getElementById('project-modal-role'),
+      stack: document.getElementById('project-modal-stack'),
+      goals: document.getElementById('project-modal-goals'),
+      challenges: document.getElementById('project-modal-challenges'),
+      results: document.getElementById('project-modal-results'),
+      github: document.getElementById('project-modal-github'),
+      demo: document.getElementById('project-modal-demo'),
+      imageMain: document.getElementById('modal-image-main'),
+      image2: document.getElementById('modal-image-2'),
+      image3: document.getElementById('modal-image-3')
+    };
+
+    function fillList(element, text) {
+      element.innerHTML = '';
+      text.split(';').map(item => item.trim()).filter(Boolean).forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        element.appendChild(li);
+      });
+    }
+
+    function openProjectModal(button) {
+      modalFields.kicker.textContent = button.dataset.projectKicker || '';
+      modalFields.title.textContent = button.dataset.projectTitle || '';
+      modalFields.description.textContent = button.dataset.projectDescription || '';
+      modalFields.role.textContent = button.dataset.projectRole || '';
+      modalFields.stack.textContent = button.dataset.projectStack || '';
+
+      fillList(modalFields.goals, button.dataset.projectGoals || '');
+      fillList(modalFields.challenges, button.dataset.projectChallenges || '');
+      fillList(modalFields.results, button.dataset.projectResults || '');
+
+      modalFields.github.href = button.dataset.projectGithub || '#';
+      modalFields.demo.href = button.dataset.projectDemo || '#';
+
+      modalFields.imageMain.src = button.dataset.projectImageMain || '';
+      modalFields.image2.src = button.dataset.projectImage2 || '';
+      modalFields.image3.src = button.dataset.projectImage3 || '';
+
+      modal.classList.add('is-visible');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      modal.classList.remove('is-visible');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    openButtons.forEach(button => {
+      button.addEventListener('click', () => openProjectModal(button));
+    });
+
+    closeModalButton.addEventListener('click', closeProjectModal);
+
+    modal.addEventListener('click', event => {
+      if (event.target === modal) {
+        closeProjectModal();
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+        closeProjectModal();
+      }
+    });
+  </script>
+</body>
 </html>

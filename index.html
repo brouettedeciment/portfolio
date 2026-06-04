@@ -1,244 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
-  <!--========= HEAD =========-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de [Votre Prénom] — Étudiant en BUT Informatique à l'IUT 2 de Grenoble." />
+  <title>Accueil — Portfolio BUT Info</title>
 
-    <!-- Police JetBrain -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-    <!-- Police Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <!--========= HEADER =========-->
-  <header>
-    <a href="./"> <h1>Mon portfolio</h1></a>
-    <nav>
-      <a href="./" class="pageActuel">Accueil</a>
-      <a href="aPropos.html">A propos</a>
-      <a href="projets.html">Mes projets</a>
-      <button onclick="goContact()">Me contacter</button>
-    </nav>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">dev.portfolio</a>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="index.html" class="active" aria-current="page">Accueil</a>
+        <a href="projets.html">Projets</a>
+        <a href="aPropos.html">À propos</a>
+        <a href="contact.html" class="header__cta">Contact</a>
+      </nav>
+    </div>
   </header>
-  <script>
-    function goContact() {
-      window.location.href = "contact.html";
-    }
-  </script>
 
-  <!--========= BODY =========-->
-  <body>
-    <!---------- SECTION HERO ---------->
-    <section class="accueil">
-      <section class="bienvenue">
-        <h3>Bonjour, je suis</h3>
-        <h3 class="nom">Tino Schwob</h3>
-      </section>
-      <section class="boutons">
-        <a href="./"><button class="meContacter">Me contacter</button></a>
-        <a href="./"><button class="aPropos">A propos de moi</button></a>
-      </section>
-      <section class="text">
-        <p class="courtePresentation">
-          Etudiant en informatique à
-          <a
-            href="https://iut2.univ-grenoble-alpes.fr/formations/bachelors-universitaires-de-technologie/but-informatique-794110.kjsp?RH=1608220848991"
-            target="_blank"
-            >l'IUT 2 de Grenoble</a
-          >
-        </p>
-        <p class="presentation">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
-          recusandae doloremque maxime officia accusamus, eum, veritatis quo
-          itaque quia ullam eaque sunt consequatur porro ipsum ipsa neque
-          asperiores. Eius, quibusdam!
-        </p>
-      </section>
-    </section>
+  <main>
 
-    <!---------- SECTION PROJETS ---------->
-    <section class="projets">
-      <h2>Mes projets</h2>
-
-      <div class="projects-grid">
-        <a href="./projets.html" class="project-card">
-          <img src="https://picsum.photos/500/300" alt="Projet 1" />
-
-          <div class="project-content">
-            <h3>Portfolio Web</h3>
-
-            <p>
-              Création d’un portfolio responsive en HTML, CSS et JavaScript.
-            </p>
-
-            <div class="tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JS</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="./projets.html" class="project-card">
-          <img src="https://picsum.photos/501/300" alt="Projet 2" />
-
-          <div class="project-content">
-            <h3>Projet micro:bit</h3>
-
-            <p>Affichage de l’autonomie énergétique d’un refuge.</p>
-
-            <div class="tags">
-              <span>Python</span>
-              <span>micro:bit</span>
-              <span>LCD</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="./projets.html" class="project-card">
-          <img src="https://picsum.photos/502/300" alt="Projet 3" />
-
-          <div class="project-content">
-            <h3>Application JS</h3>
-
-            <p>Petite application interactive avec animations dynamiques.</p>
-
-            <div class="tags">
-              <span>JavaScript</span>
-              <span>UI</span>
-            </div>
-          </div>
-        </a>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="hero__eyebrow">Étudiant BUT Informatique — IUT 2 Grenoble</span>
+      <h1 id="hero-title" class="hero__title">
+        Bonjour, je suis<br />
+        <span class="text-gradient">Schwob Tino</span>
+      </h1>
+      <p class="hero__subtitle">
+        Je conçois des projets web et logiciels avec une approche propre, lisible et logique.
+      </p>
+      <p class="hero__desc">
+        Actuellement en première année de BUT Informatique, je développe mes compétences en développement web,
+        programmation, bases de données et systèmes. J'aime transformer une idée en projet concret,
+        avec une interface claire et un code maintenable.
+      </p>
+      <div class="hero__actions">
+        <a href="projets.html" class="btn btn--primary">Voir mes projets</a>
+        <a href="aPropos.html" class="btn btn--outline">Découvrir mon parcours</a>
       </div>
-      <a href="projets.html" class="voir-plus"> Voir tous les projets → </a>
     </section>
 
-    <!---------- SECTION A PROPOS ---------->
-    <section class="aPropos">
-      <div class="aPropos-container">
-        <div class="aPropos-title">
-          <h2>A propos</h2>
-          <p>
-            Mon parcours d’étude et mon évolution dans le domaine de
-            l’informatique.
-          </p>
+    <!-- COMPÉTENCES
+         Les tags utilisent Simple Icons CDN pour les logos officiels en noir.
+         Le CDN accepte un paramètre de couleur hex directement dans l'URL :
+         https://cdn.simpleicons.org/{slug}/{couleur-hex}
+    -->
+    <section class="competences" aria-labelledby="skills-title">
+      <div class="container--wide">
+        <div class="section-header" style="text-align:center;">
+          <h2 id="skills-title">Compétences principales</h2>
+          <p>Un socle technique construit au fil des cours, des SAÉ et de mes expérimentations personnelles.</p>
         </div>
 
-        <div class="timeline">
-          <!-- Etape 1 -->
-          <div class="timeline-card">
-            <div class="timeline-date">2021 - 2024</div>
+        <div class="skills-grid">
 
-            <div class="timeline-content">
-              <h3>Lycée</h3>
-
-              <p class="timeline-place">Baccalauréat général</p>
-
-              <p>
-                Découverte de la programmation et des bases du développement
-                informatique à travers différents projets scolaires et
-                personnels.
-              </p>
+          <!-- Développement web -->
+          <article class="skill-card">
+            <h3 class="skill-card__title">Développement web</h3>
+            <div class="skill-card__tags card-tags">
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/html5/7a1cac" alt="" class="tag__logo" aria-hidden="true"/>
+                HTML
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/css/7a1cac" alt="" class="tag__logo" aria-hidden="true"/>
+                CSS
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/javascript/7a1cac" alt="" class="tag__logo" aria-hidden="true"/>
+                JavaScript
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/php/7a1cac" alt="" class="tag__logo" aria-hidden="true"/>
+                PHP
+              </span>
             </div>
-          </div>
+          </article>
 
-          <!-- Etape 2 -->
-          <div class="timeline-card">
-            <div class="timeline-date">2024 - Aujourd’hui</div>
+          <!-- Programmation -->
+          <article class="skill-card">
+            <h3 class="skill-card__title">Programmation</h3>
+            <div class="skill-card__tags card-tags">
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/python/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                Python
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/coffeescript/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                Java
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/c/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                C
+              </span>
+            </div>
+          </article>
 
-            <div class="timeline-content">
-              <h3>BUT Informatique</h3>
+          <!-- Données -->
+          <article class="skill-card">
+            <h3 class="skill-card__title">Données</h3>
+            <div class="skill-card__tags card-tags">
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/mysql/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                MySQL
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/postgresql/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                PostgreSQL
+              </span>
+              <span class="tag">
+                
+                <img src="https://cdn.simpleicons.org/blender/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                Modélisation
+              </span>
+            </div>
+          </article>
 
-              <p class="timeline-place">IUT 2 Grenoble</p>
+          <!-- Outils -->
+          <article class="skill-card">
+            <h3 class="skill-card__title">Outils</h3>
+            <div class="skill-card__tags card-tags">
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/git/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                Git
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/github/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                GitHub
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/linux/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                Linux
+              </span>
+              <span class="tag">
+                <img src="https://cdn.simpleicons.org/gnubash/7a1cac" alt="" class="tag__logo" aria-hidden="true" />
+                Bash
+              </span>
+            </div>
+          </article>
 
-              <p>
-                Formation centrée sur le développement logiciel, les bases de
-                données, les réseaux, l’algorithmique et la gestion de projet.
-              </p>
+        </div>
+      </div>
+    </section>
 
-              <div class="timeline-tags">
-                <span>Java</span>
-                <span>SQL</span>
-                <span>Web</span>
-                <span>Git</span>
+    <!-- PROJETS EN VEDETTE -->
+    <section class="projets-vedette" aria-labelledby="featured-title">
+      <div class="container--wide">
+        <div class="section-header" style="text-align:center;">
+          <h2 id="featured-title">Projets à découvrir</h2>
+          <p>Chaque projet a été pensé comme une vraie démonstration de méthode, de logique et de progression.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-card__media">
+              <img class="project-card__img" src="https://picsum.photos/seed/weather-home/800/500" alt="Aperçu du projet météo" width="800" height="500" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">Projet web</span>
+                <span class="tag">API</span>
+              </div>
+              <h3 class="project-card__title">Application météo interactive</h3>
+              <p class="project-card__desc">Un projet front-end pour récupérer, filtrer et afficher des données météo en temps réel dans une interface claire.</p>
+              <ul class="project-card__highlights">
+                <li>Consommation d'API REST</li>
+                <li>Interface responsive</li>
+                <li>Travail sur l'UX et la lisibilité</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="projets.html" class="btn btn--outline project-card__button">Voir le détail</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Etape 3 -->
-          <div class="timeline-card">
-            <div class="timeline-date">Objectif</div>
-
-            <div class="timeline-content">
-              <h3>Développeur logiciel</h3>
-
-              <p>
-                Continuer à développer mes compétences techniques à travers des
-                projets personnels, universitaires et professionnels.
-              </p>
+          <article class="project-card">
+            <div class="project-card__media">
+              <img class="project-card__img" src="https://picsum.photos/seed/library-home/800/500" alt="Aperçu du projet bibliothèque" width="800" height="500" loading="lazy" />
             </div>
-          </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">SAÉ</span>
+                <span class="tag">BDD</span>
+              </div>
+              <h3 class="project-card__title">Gestion de bibliothèque</h3>
+              <p class="project-card__desc">Une application orientée gestion pour modéliser, stocker et exploiter des données de manière cohérente.</p>
+              <ul class="project-card__highlights">
+                <li>CRUD complet</li>
+                <li>Travail en équipe</li>
+                <li>Schéma de base de données</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="projets.html" class="btn btn--outline project-card__button">Voir le détail</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-  </body>
 
-  <!--========= FOOTER =========-->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-top">
-        <h2>Tino Schwob</h2>
+  </main>
 
-        <p>
-          Étudiant en informatique à l'IUT 2 de Grenoble, passionné par le
-          développement et les projets créatifs.
-        </p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <h2 class="text-gradient">Construisons quelque chose de solide</h2>
+        <p>Je suis disponible pour échanger autour d'un stage, d'une alternance ou d'un projet étudiant.</p>
       </div>
 
-      <div class="footer-links">
-        <div class="footer-column">
+      <div class="footer__links">
+        <div class="footer__col">
           <h3>Navigation</h3>
-
-          <a href="./">Accueil</a>
-          <a href="aPropos.html">A propos</a>
-          <a href="projets.html">Mes projets</a>
+          <a href="index.html">Accueil</a>
+          <a href="projets.html">Projets</a>
+          <a href="aPropos.html">À propos</a>
           <a href="contact.html">Contact</a>
         </div>
 
-        <div class="footer-column">
-          <h3>Réseaux</h3>
-
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Instagram</a>
+        <div class="footer__col">
+          <h3>Formation</h3>
+          <p>BUT Informatique</p>
+          <p>IUT 2 — Grenoble</p>
+          <p>1ère année — 2024/2025</p>
         </div>
 
-        <div class="footer-column">
-          <h3>Contact</h3>
-
-          <p>tino.schwob@email.com</p>
-          <p>Grenoble, France</p>
+        <div class="footer__col">
+          <h3>Retrouvez-moi</h3>
+          <div class="footer__socials">
+            <a class="footer__social-link" href="https://github.com/brouettedeciment" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.426 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.455-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/></svg>
+              </span>
+              <span class="footer__social-label">GitHub</span>
+            </a>
+            <a class="footer__social-link" href="https://www.linkedin.com/in/tino-schwob" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.5H6.26V17H8.34M7.3 9.56A1.2 1.2 0 1 0 7.3 7.16A1.2 1.2 0 0 0 7.3 9.56M17.74 17V13.42C17.74 11.5 16.71 10.3 14.96 10.3C13.55 10.3 12.92 11.08 12.57 11.63V10.5H10.5C10.53 11.25 10.5 17 10.5 17H12.57V13.37C12.57 13.18 12.58 12.99 12.64 12.85C12.79 12.47 13.14 12.07 13.72 12.07C14.48 12.07 14.79 12.64 14.79 13.48V17H17.74Z"/></svg>
+              </span>
+              <span class="footer__social-label">LinkedIn</span>
+            </a>
+            <a class="footer__social-link" href="assets/cv.pdf" download aria-label="Télécharger mon CV">
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              </span>
+              <span class="footer__social-label">Mon CV (PDF)</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 Tino Schwob — Tous droits réservés.</p>
+      <div class="footer__bottom">
+        <p>© 2025 Schwob Tino — Étudiant BUT Informatique, IUT 2 Grenoble</p>
       </div>
     </div>
   </footer>
+
+</body>
 </html>
